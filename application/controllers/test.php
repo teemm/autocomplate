@@ -9,5 +9,6 @@ class test extends CI_Controller {
 		$arg = $this->input->get('arg');
 		$this->load->model('model');
 		echo (json_encode($this->model->keyup($arg)));
+		echo $arg;
 	}
 }

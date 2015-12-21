@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	$(function(){
 		$('#sw_search').on('keyup', function(){
 			_html = "";
-			$.get('<?php echo base_url("test/coment"); ?>',{ coment : $(this).val() }, function(resp){
+			$.get('<?php echo base_url("test/coment"); ?>',{ arg : $(this).val() }, function(resp){
 				for (var i = 0; i < resp.length; i++) {
 					_html += '<li>' + resp[i].content + '</li>'
 				}
